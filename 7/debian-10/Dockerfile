@@ -20,6 +20,8 @@ RUN /opt/bitnami/scripts/logstash/postunpack.sh
 ENV BITNAMI_APP_NAME="logstash" \
     BITNAMI_IMAGE_VERSION="7.6.2-debian-10-r42" \
     PATH="/opt/bitnami/logstash/bin:/opt/bitnami/java/bin:/opt/bitnami/common/bin:$PATH"
+    
+RUN /opt/bitnami/logstash/bin/logstash-plugin install logstash-input-jdbc
 
 EXPOSE 8080
 
