@@ -21,7 +21,7 @@ ENV BITNAMI_APP_NAME="logstash" \
     BITNAMI_IMAGE_VERSION="7.6.2-debian-10-r42" \
     PATH="/opt/bitnami/logstash/bin:/opt/bitnami/java/bin:/opt/bitnami/common/bin:$PATH"
     
-RUN /opt/bitnami/logstash/bin/logstash-plugin install logstash-input-jdbc
+COPY ./jars/mssql-jdbc-8.2.2.jre11.jar /opt/bitnami/logstash/logstash-core/lib/jars/mssql-jdbc.jar
 
 EXPOSE 8080
 
