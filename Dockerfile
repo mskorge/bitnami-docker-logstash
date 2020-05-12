@@ -6,7 +6,8 @@ ENV HOME="/" \
     OS_FLAVOUR="debian-10" \
     OS_NAME="linux"
     
-COPY ./jars/mssql-jdbc-8.2.2.jre11.jar /opt/bitnami/logstash/logstash-core/lib/jars/mssql-jdbc.jar
+COPY ./jars/mssql-jdbc-8.2.2.jre8.jar /opt/bitnami/logstash/logstash-core/lib/jars/mssql-jdbc-jre8.jar
+
 
 EXPOSE 8080
 
